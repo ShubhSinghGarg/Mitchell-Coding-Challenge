@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" prefHeight="845.0" prefWidth="728.0" text="Mitchell Coding Challenge" textAlignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="896.0" prefWidth="726.0">
+               <children>
+                  <TabPane prefHeight="774.0" prefWidth="728.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="CREATE">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="TA_create_ID" layoutX="327.0" layoutY="66.0" prefHeight="49.0" prefWidth="387.0" promptText="Please enter the Vehicle ID" />
+                                    <TextArea fx:id="TA_create_year" layoutX="327.0" layoutY="149.0" prefHeight="49.0" prefWidth="387.0" promptText="Please enter the Year of Vehicle manufacturing" />
+                                    <TextArea fx:id="TA_create_model" layoutX="327.0" layoutY="315.0" prefHeight="49.0" prefWidth="387.0" promptText="Please enter the Vehicle Model" />
+                                    <TextArea fx:id="TA_create_make" layoutX="327.0" layoutY="229.0" prefHeight="49.0" prefWidth="387.0" promptText="Please enter the Make of the Vehicle " />
+                                    <Button fx:id="btn_create_submit" layoutX="547.0" layoutY="671.0" mnemonicParsing="false" onMouseClicked="#SubmitCreate" prefHeight="38.0" prefWidth="144.0" text="Submit" />
+                                    <Button fx:id="btn_create_clear" layoutX="377.0" layoutY="671.0" mnemonicParsing="false" onMouseClicked="#ClearCreate" prefHeight="38.0" prefWidth="144.0" text="Clear" />
+                                    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="75.0" layoutY="69.0" prefHeight="44.0" prefWidth="119.0" text="Vehicle ID" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="75.0" layoutY="152.0" prefHeight="44.0" prefWidth="119.0" text="Year">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="75.0" layoutY="313.0" prefHeight="44.0" prefWidth="119.0" text="Model">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="87.0" layoutY="232.0" prefHeight="44.0" prefWidth="95.0" text="Make">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lab_result_create" alignment="TOP_CENTER" layoutX="100.0" layoutY="405.0" prefHeight="237.0" prefWidth="572.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" top="20.0" />
+                                       </padding>
+                                    </Label>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="GET">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextArea fx:id="TA_get_ID" layoutX="98.0" layoutY="37.0" prefHeight="110.0" prefWidth="526.0" promptText="Please enter the ID of the vehicle you want to search for." />
+                                    <Button fx:id="btn_get_submit" layoutX="494.0" layoutY="166.0" mnemonicParsing="false" onMouseClicked="#SearchGet" prefHeight="45.0" prefWidth="130.0" text="Search" />
+                                    <Label layoutX="98.0" layoutY="152.0" prefHeight="28.0" prefWidth="216.0" text="Enter * to get all the entries" />
+                                    <Label fx:id="lab_get_result_tag" alignment="CENTER" layoutX="84.0" layoutY="277.0" prefHeight="40.0" prefWidth="87.0" text="Result" textAlignment="CENTER" visible="false">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lab_get_result" alignment="TOP_LEFT" layoutX="98.0" layoutY="404.0" prefHeight="302.0" prefWidth="567.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="20.0" top="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children></AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="UPDATE">
+                           <content>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="txf_update_col" layoutX="399.0" layoutY="124.0" prefHeight="58.0" prefWidth="268.0" promptText="Example: ID, Year, Model, Make" />
+                                    <Label layoutX="60.0" layoutY="123.0" prefHeight="56.0" prefWidth="285.0" text="What would you like to Update">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txf_update_val" layoutX="399.0" layoutY="340.0" prefHeight="58.0" prefWidth="268.0" />
+                                    <Label layoutX="60.0" layoutY="340.0" prefHeight="56.0" prefWidth="285.0" text="New Value">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btn_update_submit" layoutX="531.0" layoutY="479.0" mnemonicParsing="false" onMouseClicked="#UpdateSubmit" prefHeight="42.0" prefWidth="136.0" text="Submit" />
+                                    <Label fx:id="lab_update_result" alignment="TOP_LEFT" layoutX="51.0" layoutY="590.0" prefHeight="131.0" prefWidth="610.0">
+                                       <padding>
+                                          <Insets left="20.0" top="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children></AnchorPane>
+                           </content>
+                      </Tab>
+                      <Tab text="DELETE">
+                           <content>
+                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="102.0" layoutY="39.0" prefHeight="24.0" prefWidth="151.0" text="Enter the Vehicle ID" />
+                                    <Button fx:id="btn_delete_submit" layoutX="527.0" layoutY="142.0" mnemonicParsing="false" onMouseClicked="#DeleteSubmit" prefHeight="40.0" prefWidth="99.0" text="Delete" />
+                                    <TextArea fx:id="TA_delete_ID" layoutX="99.0" layoutY="68.0" prefHeight="64.0" prefWidth="529.0" promptText="Please enter the ID of the vehicle you want to delete" />
+                                    <Label fx:id="lab_delete_result" alignment="TOP_CENTER" layoutX="133.0" layoutY="255.0" prefHeight="85.0" prefWidth="476.0" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</GridPane>
